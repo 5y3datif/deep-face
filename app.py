@@ -1,6 +1,6 @@
 from flask import Flask, render_template, Response, request, url_for
 # from camera import VideoCamera
-#import requests
+import requests
 #import cv2
 #from services import FR_Services
 #import face_recognition
