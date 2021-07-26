@@ -8,7 +8,7 @@ import requests
 app = Flask(__name__)
 # cap = cv2.VideoCapture(0)
 # app.config["IMAGE_UPLOADS"] = "Train"
-#@app.route('/', methods=['GET', 'POST'])
+@app.route('/', methods=['GET', 'POST'])
 def home():
     #if request.method == 'POST':
         #if request.files:
