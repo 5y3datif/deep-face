@@ -1,24 +1,24 @@
-from flask import Flask, render_template, Response, request, url_for
+#from flask import Flask, render_template, Response, request, url_for
 # from camera import VideoCamera
-import requests
-import cv2
-from services import FR_Services
-import face_recognition
+#import requests
+#import cv2
+#from services import FR_Services
+#import face_recognition
 
 app = Flask(__name__)
 # cap = cv2.VideoCapture(0)
 # app.config["IMAGE_UPLOADS"] = "Train"
 @app.route('/', methods=['GET', 'POST'])
 def home():
-    if request.method == 'POST':
-        if request.files:
-            unknown_image = request.files['unknown_image']
-            image = face_recognition.load_image_file("images/hussain.jpeg")
-            face_landmarks_list = face_recognition.face_landmarks(image)
-            biden_encoding = face_recognition.face_encodings(image)[0]
-            label = FR_Services.face_recognize(unknown_image)
+    #if request.method == 'POST':
+        #if request.files:
+        #    unknown_image = request.files['unknown_image']
+        #    image = face_recognition.load_image_file("images/hussain.jpeg")
+        #    face_landmarks_list = face_recognition.face_landmarks(image)
+        #    biden_encoding = face_recognition.face_encodings(image)[0]
+        #    label = FR_Services.face_recognize(unknown_image)
             # print(label)
-            return render_template('index.html', label=label)
+        #    return render_template('index.html', label=label)
     return render_template('index.html')
 
 # @app.route('/face_recognition/')
